@@ -1,0 +1,45 @@
+/* Header */
+.header__container {
+  position: fixed;
+  padding-block: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000;
+}
+
+.nav__list {
+  display: flex;
+  column-gap: 1rem;
+}
+
+.header__button-search,
+.header__button-archive,
+.button__add {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
+  background-color: rgb(59, 59, 59);
+}
+
+.header__button-search:hover,
+.header__button-archive:hover,
+.button__add:hover {
+  background-color: rgba(59, 59, 59, 0.5);
+}
+
+/* Feature Add */
+.add__feature-container {
+  position: fixed;
+  bottom: 3rem;
+  right: 0;
+}
+
+/* main */
+.main {
+  padding-block: 5rem;
+}

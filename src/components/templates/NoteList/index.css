@@ -1,0 +1,17 @@
+.noteList__container {
+  display: grid;
+  column-gap: 1rem;
+  row-gap: 1rem;
+}
+
+@media screen and (min-width: 640px) {
+  .noteList__container {
+    grid-template-columns: repeat(2, auto);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .noteList__container {
+    grid-template-columns: repeat(3, auto);
+  }
+}

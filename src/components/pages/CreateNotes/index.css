@@ -1,0 +1,45 @@
+.button__back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
+  background-color: rgb(59, 59, 59);
+}
+
+.button__back:hover {
+  background-color: rgba(59, 59, 59, 0.5);
+}
+
+.header__button {
+  height: 45px;
+  width: 90px;
+  font-size: 1rem;
+  border-radius: 10px;
+  background-color: rgb(126, 11, 126);
+  color: white;
+}
+
+.header__button:hover {
+  background-color: rgba(126, 11, 126, 0.5);
+}
+
+.input__title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.form__input {
+  background: none;
+  border: none;
+  outline: none;
+  font-family: "Nunito Sans", sans-serif;
+  width: 100%;
+  color: white;
+  resize: none;
+}
+
+.input__body {
+  font-size: 1rem;
+}

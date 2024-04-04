@@ -1,0 +1,12 @@
+.header__button-container {
+  display: flex;
+  column-gap: 1rem;
+}
+
+.button__delete {
+  background-color: rgb(255, 0, 0) !important;
+}
+
+.button__delete:hover {
+  background-color: rgba(255, 0, 0, 0.5) !important;
+}

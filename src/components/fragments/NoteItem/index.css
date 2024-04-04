@@ -1,0 +1,19 @@
+.noteItem__container {
+  background-color: rgb(136, 56, 154);
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.noteItem__title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.noteItem__body {
+  margin-bottom: 0.8rem;
+}
+
+.noteItem__date {
+  font-size: 0.8rem;
+  color: #e8d8d8;
+}
