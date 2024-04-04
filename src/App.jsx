@@ -19,7 +19,11 @@ const App = ({ notes }) => {
       </section>
 
       <main className="main container">
-        <NoteList notes={notes} />
+        {notes.length > 0 ? (
+          <NoteList notes={notes} />
+        ) : (
+          <h1>Belum ada catatan</h1>
+        )}
       </main>
     </>
   );

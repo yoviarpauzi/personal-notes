@@ -11,9 +11,7 @@ const NoteItem = ({ note }) => {
             : note.title}
         </h3>
         <p className="noteItem__body">
-          {note.body.length > 100
-            ? note.body.substr(0, 100) + "..."
-            : note.body}
+          {note.body.length > 80 ? note.body.substr(0, 80) + "..." : note.body}
         </p>
         <p className="noteItem__date">
           {new Date(note.createdAt).toLocaleString() + " "}
