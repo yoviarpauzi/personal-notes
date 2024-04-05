@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import "./index.css";
 import { useNavigate } from "react-router-dom";
+import { MdArchive } from "react-icons/md";
+import { MdUnarchive } from "react-icons/md";
 
 const Notes = ({ notes, setNotes }) => {
   const { noteId } = useParams();
@@ -12,10 +14,30 @@ const Notes = ({ notes, setNotes }) => {
   const [body, setBody] = useState(note.body);
   const navigate = useNavigate();
 
+  const moveNotes = () => {
+    const newNote = {
+      id: note.id,
+      title: note.title,
+      body: note.body,
+      createdAt: new Date().toISOString(),
+      archived: note.archived == true ? false : true,
+    };
+
+    const newNotes = notes.map((item) => {
+      if (item.id == noteId) {
+        item = newNote;
+      }
+      return item;
+    });
+
+    setNotes(newNotes);
+    navigate("/");
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const note = {
+    const newNote = {
       id: noteId,
       title: title,
       body: body,
@@ -25,11 +47,10 @@ const Notes = ({ notes, setNotes }) => {
 
     const newNotes = notes.map((item) => {
       if (item.id == noteId) {
-        item = note;
+        item = newNote;
       }
       return item;
     });
-    console.log(newNotes);
 
     setNotes(newNotes);
     navigate("/");
@@ -88,7 +109,19 @@ const Notes = ({ notes, setNotes }) => {
           </div>
         </form>
       </main>
-      <footer></footer>
+      <section className="addToArchive__container container">
+        <button
+          type="button"
+          className="button__addToArchive"
+          onClick={moveNotes}
+        >
+          {note.archived == false ? (
+            <MdArchive className="icon" />
+          ) : (
+            <MdUnarchive className="icon" />
+          )}
+        </button>
+      </section>
     </>
   );
 };

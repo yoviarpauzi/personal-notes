@@ -5,6 +5,7 @@ import App from "./App";
 import { useState } from "react";
 import initialData from "./utils";
 import { useEffect } from "react";
+import Archives from "./components/pages/Archives";
 
 const InitialPages = () => {
   const [notes, setNotes] = useState(
@@ -26,6 +27,10 @@ const InitialPages = () => {
         <Route
           path="/note/:noteId"
           element={<Notes notes={notes} setNotes={setNotes} />}
+        ></Route>
+        <Route
+          path="/archives"
+          element={<Archives notes={notes} setNotes={setNotes} />}
         ></Route>
       </Routes>
     </BrowserRouter>

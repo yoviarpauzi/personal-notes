@@ -1,0 +1,9 @@
+.button__left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
+  background-color: rgb(59, 59, 59);
+}

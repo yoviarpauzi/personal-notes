@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const NoteItem = ({ note }) => {
   return (
-    <Link to={`note/${note.id}`}>
+    <Link to={`/note/${note.id}`}>
       <div className="noteItem__container">
         <h3 className="noteItem__title">
           {note.title.length > 20

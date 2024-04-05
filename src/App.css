@@ -43,3 +43,8 @@
 .main {
   padding-block: 5rem;
 }
+
+.notFound {
+  text-align: center;
+  color: #6b6b6b;
+}
